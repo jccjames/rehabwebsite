@@ -362,9 +362,52 @@ body {
 }
 
 .feature-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(217, 70, 239, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.feature-icon:hover::before {
+    left: 100%;
+}
+
+.feature-icon svg {
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.feature-card:hover .feature-icon {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(217, 70, 239, 0.15) 100%);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+}
+
+.feature-card:hover .feature-icon svg {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.3));
 }
 
 .feature-card h3 {
@@ -632,6 +675,17 @@ body {
     .feature-card,
     .testimonial-card {
         padding: 2rem;
+    }
+    
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 16px;
+    }
+    
+    .feature-icon svg {
+        width: 48px;
+        height: 48px;
     }
     
     .phone-mockup {
