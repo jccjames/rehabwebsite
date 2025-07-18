@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jccjames.github.io/rehabwebsite/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow certain paths
+Disallow: /temp_repo/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /app-preview.css
+
+# Allow specific important pages
+Allow: /index.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Allow: /images/
+Allow: /styles.css
+Allow: /script.js
