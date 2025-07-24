@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const buttonText = this.textContent;
             if (buttonText.includes('iOS')) {
-                window.open('https://apps.apple.com/app/rehabapp', '_blank');
+                window.open('https://apps.apple.com/us/app/rebound-ai-physio-rehab-coach/id6748781391', '_blank');
             } else if (buttonText.includes('Android')) {
                 window.open('https://play.google.com/store/apps/details?id=com.rehabapp', '_blank');
             }
